@@ -34,7 +34,6 @@
         {% if blog.comments_enabled? %}
 
           {% if number_of_comments > 0 %}
-            <hr class="hr--large">
             <h2 class="h3 text-center">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h2>
             <hr class="hr--small hr--clear">
           {% endif %}
@@ -86,7 +85,6 @@
 
               {% endif %}
 
-              <hr class="hr--large">
 
               <h2 class="h3 text-center">{{ 'blogs.comments.title' | t }}</h2>
               <hr class="hr--small hr--clear">
