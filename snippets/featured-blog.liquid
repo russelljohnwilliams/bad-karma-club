@@ -19,9 +19,8 @@
 </h2>
 {% if section.settings.blog_show_excerpt %}
   <div class="rte rte--indented-images">
-    {{ article.excerpt_or_content | strip_html | truncatewords: 30 }}
+    {{ article.excerpt_or_content }}
   </div>
 {% endif %}
 <p>
-  <a href="{{ article.url }}" class="text-link">{{ 'blogs.article.read_more' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
 </p>

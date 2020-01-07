@@ -1926,6 +1926,7 @@ $shareCountBg: $colorBody;
     margin: 0;
     background: $colorHeadings;
     color: #0551AC;
+    /*opacity: 0;*/
   }
 
   @include at-query($min, $large) {
@@ -2114,7 +2115,33 @@ h2:not(.hero__title), .h3:not(.hero__title){
     background-color: yellow;
     color: blue;
     padding: 25px;
+    border: solid yellow 1px;
+    transition: 0.8s;
   }
+
+  .subscription-product:hover{
+    background-color: #194aab;
+    border: solid white 1px;
+    color: yellow;
+
+    h3{
+      color: yellow;
+    }
+
+    button{
+      color: white;
+      background-color: black;
+    }
+
+  }
+  /*.subscription-product:hover h3{
+    color: black;
+  }
+
+  .subscription-product:hover button{
+    color: white;
+    background-color: black;
+  }*/
 
   .savings{
     text-align: center;
@@ -2124,6 +2151,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
   }
 
   button{
+    transition: 0.5s;
     background-color: red;
     width: 80%;
     height: 60px;
@@ -4513,4 +4541,11 @@ Hiding the word 'Shopify' but not from screen readers.
 
 
 
+#shopify-section-1578094834442 img{
+  transition: all 2s;
+  opacity:0;
+  margin-left:-300px; 
+  max-width:100%;
+  /*transform: rotate(-45deg)*/
+}
 
