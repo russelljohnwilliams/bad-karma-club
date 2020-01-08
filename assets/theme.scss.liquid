@@ -1527,6 +1527,10 @@ a {
   font-size: em(14px);
 }
 
+.btn{
+  font-family: sans-serif;
+}
+
 /*================ Buttons and Input Groups ================*/
 .btn,
 .btn--secondary {
@@ -1948,6 +1952,32 @@ h2:not(.hero__title), .h3:not(.hero__title){
   line-height: 1em;
 }
 
+
+
+#shopify-section-1578094834442{
+
+  img{
+    transition: all 2s;
+    opacity:0;
+    margin-left:-300px; 
+    max-width:100%;
+    transform: rotate(-90deg)
+  }
+
+  .feature-row__text--left{
+    padding-right: 0;
+  }
+
+  h2, .h3{
+    font-size: 2.7em;
+  }
+} 
+
+.rte-setting{
+  font-style: italic;
+}
+
+
 /*================ Partials | Sections onboarding ================*/
 .placeholder-svg {
   fill: $color-blankstate;
@@ -2079,12 +2109,29 @@ h2:not(.hero__title), .h3:not(.hero__title){
 
 /*================ Partials | section mini text ================*/
 
-
-.mini-text-section-one{
+.mini-text{
   position: relative;
-  bottom: -200px;
   font-style: italic;
 }
+.mini-text-section-one{
+  bottom: -200px;
+}
+
+#shopify-section-1578440277330{
+  margin: 0;
+}
+
+.mini-text-section-two{
+  top: -100px;
+}
+
+.mini-text-section-three{
+  transform: rotate(-90deg);
+  top: 360px;
+  left: -55%;
+  z-index: 5;
+}
+
 
 /*================ Partials | section blog ================*/
 
@@ -2109,6 +2156,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
     /*padding: 25px;*/
     text-align: justify;
     margin-bottom: 75px;
+    font-style: italic;
   }
 
   .subscription-product{
@@ -2141,27 +2189,27 @@ h2:not(.hero__title), .h3:not(.hero__title){
   .subscription-product:hover button{
     color: white;
     background-color: black;
-  }*/
+    }*/
 
-  .savings{
-    text-align: center;
-    color: black;
-    font-family: arial;
-    height: 30px;
+    .savings{
+      text-align: center;
+      color: black;
+      font-family: arial;
+      height: 30px;
+    }
+
+    button{
+      transition: 0.5s;
+      background-color: red;
+      width: 80%;
+      height: 60px;
+      align-self: center;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
-  button{
-    transition: 0.5s;
-    background-color: red;
-    width: 80%;
-    height: 60px;
-    align-self: center;
-    margin: 0 auto;
-    display: block;
-  }
-}
-
-/*================ Module-specific styles ================*/
+  /*================ Module-specific styles ================*/
 /*============================================================================
 To update Slick slider to a new version,
 scroll down to #Slick Slider SCSS and follow the instructions
@@ -4541,11 +4589,8 @@ Hiding the word 'Shopify' but not from screen readers.
 
 
 
-#shopify-section-1578094834442 img{
-  transition: all 2s;
-  opacity:0;
-  margin-left:-300px; 
-  max-width:100%;
-  /*transform: rotate(-45deg)*/
-}
+
+
+
+
 
