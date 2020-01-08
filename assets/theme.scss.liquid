@@ -2154,7 +2154,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
 
   p{ 
     /*padding: 25px;*/
-    text-align: justify;
+    /*text-align: justify;*/
     margin-bottom: 75px;
     font-style: italic;
   }
@@ -2163,22 +2163,30 @@ h2:not(.hero__title), .h3:not(.hero__title){
     background-color: yellow;
     color: blue;
     padding: 25px;
-    border: solid yellow 1px;
-    transition: 0.8s;
+    margin: 0;
+    font-size: 1em;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+/**/
+  .rte, .rte>div, .custom__item{
+    margin-bottom: 0;
   }
 
   .subscription-product:hover{
-    background-color: #194aab;
-    border: solid white 1px;
-    color: yellow;
-
+    background-color: #ffff00;
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
+    -moz-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
+    box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
     h3{
-      color: yellow;
+      /*color: yellow;*/
     }
 
     button{
-      color: white;
-      background-color: black;
+/*      color: white;
+      background-color: black;*/
     }
 
   }
@@ -2206,6 +2214,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
       align-self: center;
       margin: 0 auto;
       display: block;
+      font-family: arial;
     }
   }
 
