@@ -3778,21 +3778,33 @@ $(document).ready(function() {
 });
 
 
-// $(document).ready(function(){
-//   $(".subscription-product").hover(function(){
-//     var obj = $(this);
-//     var height = obj.outerHeight();
-//     var width = obj.outerWidth();
-//     obj.addClass("subscription-hover");
-//     obj.animate({"height": height+4+"px", "width": width+4+"px", "margin-top": "-2px","margin-left": "-2px", "padding": "27px"},
-//       500, 'linear');
-//   }, function(){ 
-//     var obj = $(this)
-//     var height = obj.outerHeight();
-//     var width = obj.outerWidth();
-//     obj.removeClass("subscription-hover");
-//     obj.animate({"height": height-4+"px", "width": width-4+"px", "margin-top": "0px", "margin-left": "0px", "padding": "25px"},
-//       500, 'linear');
-//   });
-// });
+$(document).ready(function() {
+  $(window).scroll( function(){
+    $('.cross').each( function(i){
+      var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      if( bottom_of_window > bottom_of_element ){
+        $(this).css({
+          "opacity": "1", "margin": "0px"
+        });
+      }  
+    }); 
+  });
+});
+
+
+$(document).ready(function() {
+  var text = $('#shopify-section-1578086556866').find('.h3');
+  var getContent=text.text();
+  var newString=getContent.toString().replace('.','.<br />');
+  text.html(newString);
+});
+
+
+
+
+
+
+
+
 

@@ -1529,13 +1529,25 @@ a {
 
 .btn{
   font-family: sans-serif;
+  min-width: 200px;
+  margin-top: 20px;
+  min-height: 50px;
 }
+
+
+/*center the button in section 5*/
+#shopify-section-1578315341206 .rte{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /*================ Buttons and Input Groups ================*/
 .btn,
 .btn--secondary {
   @include accentFontStack;
-  padding: 12px 20px;
+  padding: 16px 20px;
   font-size: em(13px);
 }
 
@@ -1921,6 +1933,8 @@ $shareCountBg: $colorBody;
   }
 }
 
+
+
 #shopify-section-1578088711716 {  
 
   .wrapper{
@@ -1936,7 +1950,7 @@ $shareCountBg: $colorBody;
   @include at-query($min, $large) {
     .feature-row__text--left {
       padding-left: 100px;
-      padding-right: 150px;
+      padding-right: 200px;
     }
   }
 
@@ -2107,6 +2121,15 @@ h2:not(.hero__title), .h3:not(.hero__title){
 }
 
 
+/*================ Partials | section headers ================*/
+
+
+h2, .h3{
+  margin-bottom: 25px !important;
+}
+
+
+
 /*================ Partials | section mini text ================*/
 
 .mini-text{
@@ -2117,7 +2140,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
   bottom: -200px;
 }
 
-#shopify-section-1578440277330{
+#shopify-section-1578440277330, #shopify-section-1578529989899{
   margin: 0;
   height: 0;
 }
@@ -2126,17 +2149,52 @@ h2:not(.hero__title), .h3:not(.hero__title){
   top: -100px;
 }
 
-.mini-text-section-three{
+
+#shopify-section-1578787217647 {
+
+  height: 0;
+  margin: 0;
+
+  .wrapper{
+
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+}
+
+
+.mini-text-section-two-rotate{
+  float: left;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: left;
+  -moz-transform: rotate(-90deg);
+  -moz-transform-origin: left;
+  -ms-transform: rotate(-90deg);
+  -ms-transform-origin: left;
+  -o-transform: rotate(-90deg);
+  -o-transform-origin: left;
   transform: rotate(-90deg);
-  top: 360px;
-  left: -55%;
-  z-index: 5;
+  transform-origin: left;
+  top: 25em;
+}
+
+.mini-text-section-three{
+  float: right;
+  -moz-transform: rotate(90deg);  /* FF3.5+ */
+  -o-transform: rotate(90deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(90deg);  /* Saf3.1+, Chrome */
+  -moz-transform-origin: right top;
+  -o-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  top: -15em;
+  left: 15%;
 }
 
 
 #shopify-section-1578184378774{
-    margin-top: 20px;
-
+  margin-top: 20px;
 }
 
 /*================ Partials | section blog ================*/
@@ -2146,6 +2204,23 @@ h2:not(.hero__title), .h3:not(.hero__title){
   display: flex;
   flex-direction: row-reverse;
 }
+
+
+#shopify-section-1578315780936{
+
+  margin-top: 20px;
+
+  .custom__item:first-child{
+    background-color: red;
+    height: 0;
+  }
+
+  button{
+    position: relative;
+    top: -15em;
+  }
+}
+
 
 
 /*================ Partials | section subscriptions ================*/
@@ -4591,20 +4666,77 @@ Hiding the word 'Shopify' but not from screen readers.
   /*float: right;*/
   width: 100%;
   text-align: center;
+
 }
 
 .cross{
+  opacity: 0;
+  transition: 1s;
   color: yellow;
   font-size: 3em;
   line-height: 0.6em;
   font-weight: bold;
   display: inline-block;
+  margin: 0 25px;
 }
 
 
 
 
+/*================ footer ================*/
+
+.site-footer__linklist li{
+  display: inline-block;;
+  margin: 0 5px;
+}
 
 
+
+/*================ new pages ================*/
+
+
+
+
+
+/*================ get involved (products page) ================*/
+
+
+.product-page-wrapper{
+  display: flex;
+
+  .subscription-product{
+    display: inline-block;
+    width: 33.3%;
+    margin: 0 5px;
+    padding: 25px;
+    font-family: helvetica, arial, sans-serif;
+    background-color: white;
+    color: black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: justify;
+  } 
+
+  .savings{
+    height: 30px;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+
+  .btn{ 
+    margin-top: 25px;
+    width: 100%;
+
+  }
+
+  h3{
+    font-family: helvetica;
+    font-weight: 800;
+    font-size: 2.4em;
+    color: black;
+    margin: 20px 0;
+  }
+}
 
 
