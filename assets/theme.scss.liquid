@@ -1515,10 +1515,10 @@ a {
 
 .rte a,
 .text-link {
-  color: $colorLink;
+  color: white;
 
   &:hover {
-    color: $colorLinkHover;
+    color: black;
   }
 }
 
@@ -1532,6 +1532,8 @@ a {
   min-width: 200px;
   margin-top: 20px;
   min-height: 50px;
+  border-bottom: none !important;
+  padding: 15px 0;
 }
 
 
@@ -2260,45 +2262,29 @@ h2, .h3{
     -webkit-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
     -moz-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
     box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
-    h3{
-      /*color: yellow;*/
-    }
 
-    button{
-/*      color: white;
-background-color: black;*/
-}
+  }
 
-}
-  /*.subscription-product:hover h3{
+  .savings{
+    text-align: center;
     color: black;
+    font-family: arial;
+    height: 30px;
   }
 
-  .subscription-product:hover button{
-    color: white;
-    background-color: black;
-    }*/
-
-    .savings{
-      text-align: center;
-      color: black;
-      font-family: arial;
-      height: 30px;
-    }
-
-    button{
-      transition: 0.5s;
-      background-color: #f33c3c;
-      width: 80%;
-      height: 60px;
-      align-self: center;
-      margin: 0 auto;
-      display: block;
-      font-family: arial;
-    }
+  .btn{
+    transition: 0.5s;
+    background-color: #f33c3c;
+    width: 80%;
+    height: 60px;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    font-family: arial;
   }
+}
 
-  /*================ Module-specific styles ================*/
+/*================ Module-specific styles ================*/
 /*============================================================================
 To update Slick slider to a new version,
 scroll down to #Slick Slider SCSS and follow the instructions
