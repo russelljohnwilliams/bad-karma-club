@@ -434,3 +434,33 @@
   ]
 }
 {% endschema %}
+
+
+
+
+
+
+
+<!-- button for featured product -->
+
+
+
+
+<div class="product-single__add-to-cart">
+        <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"{% unless current_variant.available %} disabled="disabled"{% endunless %}>
+          <span class="btn__text">
+            {% if current_variant.available %}
+              {{ 'products.product.add_to_cart' | t }}
+            {% else %}
+              {{ 'products.product.sold_out' | t }}
+            {% endif %}
+          </span>
+        </button>
+        {% if section.settings.enable_payment_button %}
+          {{ form | payment_button }}
+        {% endif %}
+      </div>
+
+
+
+

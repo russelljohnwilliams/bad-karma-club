@@ -1488,6 +1488,7 @@
     input,
     textarea,
     select {
+      background: none;
       border: 1px solid $colorBorder;
       max-width: 100%;
       padding: 8px 10px;
@@ -1609,7 +1610,7 @@
     /*================ Input Group ================*/
     .input-group {
       position: relative;
-      display: table;
+      /*display: table;*/
       border-collapse: separate;
 
       .input-group-field:first-child,
@@ -2299,7 +2300,7 @@
     }
 
     > p:last-child {
-      margin-bottom: 0;
+      margin-bottom: 25px;
     }
 
     table {
@@ -2960,10 +2961,7 @@
     overflow-anchor: none;
   }
 
-  .product-single__meta--wrapper {
-    padding-left: 45px;
-    padding-right: 25px;
-  }
+  
 
   .product-single__meta {
     padding-top: 45px;
@@ -2991,12 +2989,17 @@
   .product-single__add-to-cart {
     margin: 0 0 10px 0;
     display: inline-flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     align-items: flex-start;
 
     &.default-product {
       margin-top: 20px;
     }
+
+    .shopify-payment-button{
+      width: 100%;
+    }
+
   }
 
   .product-single__form--no-variants {
@@ -3023,7 +3026,7 @@
   }
 
   .product-single__description {
-    margin-top: 40px;
+    margin-top: 5px;
     text-align: left;
   }
 
@@ -3106,7 +3109,7 @@
       top: 0;
       left: 0;
       right: 0;
-      width: 100%;
+      width: 90%;
     }
   }
 
@@ -3155,7 +3158,7 @@
   .product-single__price,
   .product-single__price--compare-at {
     @include accentFontStack;
-    color: $colorHeadings;
+    /*color: $colorHeadings;*/
     font-size: em(18px);
     font-weight: $headerFontWeight;
 

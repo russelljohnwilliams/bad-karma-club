@@ -3762,10 +3762,8 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(window).scroll( function(){
     $('#shopify-section-1578094834442 img').each( function(i){
-
       var bottom_of_element = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-
       if( bottom_of_window > bottom_of_element ){
         $(this).css({
           "margin-left": "0px",
@@ -3776,6 +3774,8 @@ $(document).ready(function() {
     }); 
   });
 });
+
+
 
 
 $(document).ready(function() {
@@ -3793,16 +3793,36 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-  var text = $('#shopify-section-1578086556866').find('.h3');
-  var getContent=text.text();
-  var newString=getContent.toString().replace('.','.<br />');
-  text.html(newString);
-});
+// $(document).ready(function() {
+//   var fade = $('h2')
+//   fade.html(function(index, html) {
+//   return html.replace(/\S/g, '<span class="spandex">$&</span>');
+//    })
+// })
+
+// $(document).ready(function() {
+//   $('.spandex').each(function(i) {
+//     var span = $(this)
+//     if ($(this).text() == "."){
+//       $(this).after("<br/>").delay(200 * i);
+//     }
+//     });
+// });
 
 
-
-
+// $(document).ready(function() {
+//   $(window).scroll( function(){
+//    $('.spandex').each(function(i) {
+//     var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+//     var bottom_of_window = $(window).scrollTop() + $(window).height();
+//     if( bottom_of_window > bottom_of_element ){
+//      var span = $(this)
+//          // span.delay(200).animate({"opacity": "1"});
+//          span.delay(150 * i).fadeIn(400);
+//      }  
+//    });
+//  });
+// });
 
 
 

@@ -1206,13 +1206,16 @@ label {
   opacity: 1;
 }
 
+
 input,
 textarea,
 select {
   @include bodyFontItalic;
   font-size: em(18px);
-  border-color: transparent;
-  background-color: $colorInputBg;
+  border-color: $colorBorder 1px solid;
+  border-radius: 2px;
+  background-color: none;
+  /*background-color: $colorInputBg;*/
   color: color-control($colorInputBg);
   @include transition(opacity 0.4s ease-out);
 
@@ -1530,7 +1533,7 @@ a {
 .btn{
   font-family: sans-serif;
   min-width: 200px;
-  margin-top: 20px;
+  margin: 20px 0;
   min-height: 50px;
   border-bottom: none !important;
   padding: 15px 0;
@@ -1960,6 +1963,11 @@ $shareCountBg: $colorBody;
     color: #0551AC;
   }
 
+  .feature-row__item{
+    min-width: 50%;
+    display: inline-grid;
+  }
+
 }
 
 h2:not(.hero__title), .h3:not(.hero__title){
@@ -2130,6 +2138,15 @@ h2, .h3{
   margin-bottom: 25px !important;
 }
 
+#shopify-section-1578086556866 .h3{
+
+}
+.spandex{
+  /*display: none;*/
+  /*opacity: 0;*/
+  /*transition: 0.75s;*/
+}
+
 
 
 /*================ Partials | section mini text ================*/
@@ -2156,6 +2173,8 @@ h2, .h3{
 
   height: 0;
   margin: 0;
+  position: relative;
+  z-index: 5;
 
   .wrapper{
 
@@ -2199,92 +2218,191 @@ h2, .h3{
   margin-top: 20px;
 }
 
+/*================ Partials | section products ================*/
+
+
+.product-single__meta--wrapper {
+  padding: 25px;
+  margin: 0 30px 20px;
+  background-color: $colorTextBody;
+  color: $colorBody;
+
+  h1, .price-container  {
+    color: $colorBody;
+  }
+
+  .rte p:first-of-type{
+   text-align: center;
+   color: black;
+ }
+
+ p:nth-of-type(2){
+  font-style: italic;
+  text-align: justify;
+}
+
+}
+
+#shopify-section-1578874237200, #shopify-section-1579221186190 , #shopify-section-1579221241799{
+  width: calc(33.3% - 55px);
+  margin: 0 25px;
+  display: inline-flex;
+}
+
+
+
 /*================ Partials | section blog ================*/
 
 
-#shopify-section-1578175434350 .grid-uniform{
-  display: flex;
-  flex-direction: row-reverse;
-}
+#shopify-section-1578175434350{
+  .grid-uniform{
+    display: flex;
+    flex-direction: row-reverse;}
+
+    
 
 
-#shopify-section-1578315780936{
+    @media only screen and (max-width: 768px){
+      .grid-uniform{
+        display: inline-block;
+      }
 
-  margin-top: 20px;
+      .medium--one-half{
+        width: 100%;
+      }
+    }
 
-  .custom__item:first-child{
-    background-color: red;
-    height: 0;
+
+
+
+  } 
+
+
+  #shopify-section-1578315780936{
+
+    margin-top: 20px;
+
+    .custom__item:first-child{
+      background-color: red;
+      height: 0;
+    }
+
+    button{
+      position: relative;
+      top: -15em;
+    }
   }
 
-  button{
-    position: relative;
-    top: -15em;
+
+
+  /*================ Partials | section subscriptions ================*/
+
+  #shopify-section-1578185450504{
+
+    h3{
+      margin: 0;
+      color: $colorBody;
+      font-size: 2em;
+    }
+
+    p{ 
+      text-align: justify;
+      margin-bottom: 75px;
+      font-style: italic;
+    }
+
+    .subscription-product{
+      background-color: $colorTextBody;
+      color: $colorBody;
+      padding: 25px;
+      margin: 0;
+      font-size: 1em;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: block;
+    }
+
+    /**/
+    .rte, .rte>div, .custom__item{
+      margin-bottom: 0;
+    }
+
+
+
+    .savings{
+      text-align: center;
+      color: black;
+      font-family: arial;
+      height: 30px;
+    }
+
+    .btn{
+      transition: 0.5s;
+      background-color: #f33c3c;
+      width: 80%;
+      height: 60px;
+      align-self: center;
+      margin: 0 auto;
+      display: block;
+      font-family: arial;
+    }
+
+   
+
+    @media only screen and (min-width:768px)  {
+      .subscription-product:hover{
+        background-color: whitesmoke;
+        transform: scale(1.05, 1.05);
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+        0 2px 2px rgba(0,0,0,0.12), 
+        0 4px 4px rgba(0,0,0,0.12), 
+        0 8px 8px rgba(0,0,0,0.12),
+        0 16px 16px rgba(0,0,0,0.12);
+        -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+        0 2px 2px rgba(0,0,0,0.12), 
+        0 4px 4px rgba(0,0,0,0.12), 
+        0 8px 8px rgba(0,0,0,0.12),
+        0 16px 16px rgba(0,0,0,0.12);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+        0 2px 2px rgba(0,0,0,0.12), 
+        0 4px 4px rgba(0,0,0,0.12), 
+        0 8px 8px rgba(0,0,0,0.12),
+        0 16px 16px rgba(0,0,0,0.12);
+      }
+
+      .sign-up-button:hover{
+        background: darkred;
+        -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
+        inset 1px 2px 2px rgba(0,0,0,0.12), 
+        inset 2px 4px 4px rgba(0,0,0,0.12), 
+        inset 4px 8px 8px rgba(0,0,0,0.12),
+        inset 8px 16px 16px rgba(0,0,0,0.12);
+        -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
+        inset 1px 2px 2px rgba(0,0,0,0.12), 
+        inset 2px 4px 4px rgba(0,0,0,0.12), 
+        inset 4px 8px 8px rgba(0,0,0,0.12),
+        inset 8px 16px 16px rgba(0,0,0,0.12);
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
+        inset 1px 2px 2px rgba(0,0,0,0.12), 
+        inset 2px 4px 4px rgba(0,0,0,0.12), 
+        inset 4px 8px 8px rgba(0,0,0,0.12),
+        inset 8px 16px 16px rgba(0,0,0,0.12);
+      }
+    }
+
+    @media only screen and (max-width: 768px){
+      .custom-content{
+        display: inline-block;
+      }
+
+      .one-third{
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
   }
-}
 
-
-
-/*================ Partials | section subscriptions ================*/
-
-#shopify-section-1578185450504{
-
-  h3{
-    margin: 0;
-    color: blue;
-    font-size: 2em;
-  }
-
-  p{ 
-    text-align: justify;
-    margin-bottom: 75px;
-    font-style: italic;
-  }
-
-  .subscription-product{
-    background-color: yellow;
-    color: blue;
-    padding: 25px;
-    margin: 0;
-    font-size: 1em;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  /**/
-  .rte, .rte>div, .custom__item{
-    margin-bottom: 0;
-  }
-
-  .subscription-product:hover{
-    background-color: #ffff00;
-    transform: scale(1.05, 1.05);
-    -webkit-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
-    -moz-box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
-    box-shadow: 10px 10px 13px -4px rgba(0,0,0,0.68);
-
-  }
-
-  .savings{
-    text-align: center;
-    color: black;
-    font-family: arial;
-    height: 30px;
-  }
-
-  .btn{
-    transition: 0.5s;
-    background-color: #f33c3c;
-    width: 80%;
-    height: 60px;
-    align-self: center;
-    margin: 0 auto;
-    display: block;
-    font-family: arial;
-  }
-}
-
-/*================ Module-specific styles ================*/
+  /*================ Module-specific styles ================*/
 /*============================================================================
 To update Slick slider to a new version,
 scroll down to #Slick Slider SCSS and follow the instructions
@@ -3704,7 +3822,8 @@ button.mfp-arrow {
     margin-top: -$contentTopMarginSmall;
     margin-left: -($gutter / 2);
     margin-right: -($gutter / 2);
-    padding-bottom: 55px;
+    /*padding-bottom: 55px;*/
+    
   }
 
   .slick-dots {
@@ -4658,7 +4777,7 @@ Hiding the word 'Shopify' but not from screen readers.
 .cross{
   opacity: 0;
   transition: 1s;
-  color: yellow;
+  color: $colorTextBody;
   font-size: 3em;
   line-height: 0.6em;
   font-weight: bold;
@@ -4679,9 +4798,6 @@ Hiding the word 'Shopify' but not from screen readers.
 
 
 /*================ new pages ================*/
-
-
-
 
 
 /*================ get involved (products page) ================*/
@@ -4725,4 +4841,35 @@ Hiding the word 'Shopify' but not from screen readers.
   }
 }
 
+
+/*media queries*/
+
+
+@media only screen and (max-width: 768px){
+  .mini-text{
+    display: none;
+  }
+
+  .feature-row__text{
+    max-width: 100%;
+  }
+
+  #shopify-section-1578088711716 .feature-row__text{
+    max-width: 90%;
+  }
+
+  .btn{
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .medium--six-twelfths{
+    width: 100%;
+  }
+
+  .medium--five-twelfths{
+    width: 92%;
+  }
+
+}
 
