@@ -869,10 +869,12 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      margin-left: -($gridGutter / 2);
+      margin-left: 0;
+      /*margin-left: -($gridGutter / 2);*/
 
       @include at-query($min, $postSmall) {
-        margin-left: -$gridGutter;
+        margin-left: 0;
+        /*margin-left: -$gridGutter;*/
       }
     }
 
@@ -2695,6 +2697,7 @@
   .mobile-nav__spacer {
     height: 0;
     padding: 5px;
+    border-bottom: solid 1px black;
   }
 
   .mobile-nav__has-sublist {
@@ -2799,7 +2802,7 @@
 
     .btn,
     .btn--secondary {
-      margin-bottom: $gutter / 2;
+      /*margin-bottom: $gutter / 2;*/
     }
   }
 
