@@ -11,7 +11,7 @@
         <time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}" class="date">{{ article.published_at | date: format: 'date' }}</time>
       </div>
     {% endif %}
-    <hr class="hr--small {% if section.settings.post_limit == 1 and section.settings.blog_show_image == false %}hr--middle{% else %}hr--left{% endif %}">
+    <hr class="{% if section.settings.post_limit == 1 and section.settings.blog_show_image == false %}hr--middle{% else %}hr--left{% endif %}">
   </div>
 {% endif %}
 <h2 class="h3{% if section.settings.post_limit == 1 and section.settings.blog_show_image == false %} title--one-post{% endif %}">

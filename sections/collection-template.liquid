@@ -35,7 +35,6 @@
   {%- paginate collection.products by 12 -%}
   <header class="section-header text-center">
     <h1>{{ collection.title }}</h1>
-    <hr class="hr--small">
     {%- if collection.description != blank -%}
       <div class="grid">
         <div class="grid__item">
@@ -55,7 +54,7 @@
     {%- if section.settings.collection_tags_enable -%}
       {%- if collection.all_tags.size > 0 -%}
         {%- if section.settings.collection_sort_enable -%}
-          <hr class="hr--small hr--clear">
+          <hr class="hr--clear">
         {%- endif -%}
         <ul class="tags tags--collection inline-list">
           {% comment %}
@@ -87,7 +86,7 @@
     {%- endif -%}
 
     {%- if section.settings.collection_tags_enable -%}
-      <hr class="hr--small hr--clear">
+      <hr class="hr--clear">
     {%- endif -%}
   </header>
 

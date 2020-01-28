@@ -4,14 +4,12 @@
       <div class="section-header text-center">
         <h2 class="h1 section-header__title">{{ section.settings.heading | escape }}</h2>
         {% if section.settings.subheading == blank %}
-          <hr class="hr--small">
         {% endif %}
       </div>
     {% endunless %}
     {% unless section.settings.subheading == blank %}
       <div class="section-subheading rte text-center">
         {{ section.settings.subheading }}
-        <hr class="hr--small">
       </div>
     {% endunless %}
     {% form 'customer' %}

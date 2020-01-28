@@ -1982,10 +1982,10 @@ h2:not(.hero__title), .h3:not(.hero__title){
 
   img{
     transition: all 2s;
-    opacity:0;
-    margin-left:-300px; 
+    /*opacity:0;*/
+    /*margin-left:-300px; */
     max-width:100%;
-    transform: rotate(-90deg)
+    /*transform: rotate(-90deg)*/
   }
 
   .feature-row__text--left{
@@ -1998,7 +1998,7 @@ h2:not(.hero__title), .h3:not(.hero__title){
 } 
 
 .rte-setting{
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 
@@ -2154,6 +2154,7 @@ h2, .h3{
 .mini-text{
   position: relative;
   font-style: italic;
+  font-size: 0.9em;
 }
 .mini-text-section-one{
   bottom: -200px;
@@ -2308,7 +2309,6 @@ h2, .h3{
     p{ 
       text-align: justify;
       margin-bottom: 75px;
-      font-style: italic;
     }
 
     .subscription-product{
@@ -2347,12 +2347,11 @@ h2, .h3{
       font-family: arial;
     }
 
-   
+
 
     @media only screen and (min-width:768px)  {
       .subscription-product:hover{
         border-bottom: none;
-        background-color: #DADD00;
         transform: scale(1.05, 1.05);
         -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
         0 2px 2px rgba(0,0,0,0.12), 
@@ -2372,7 +2371,6 @@ h2, .h3{
       }
 
       .sign-up-button:hover{
-        background: darkred;
         -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
         inset 1px 2px 2px rgba(0,0,0,0.12), 
         inset 2px 4px 4px rgba(0,0,0,0.12), 
@@ -3158,7 +3156,7 @@ that were modified above
 .site-header__logo a,
 .header-logo a {
   @include transition(color 0.2s);
-  @include accentFontStack;
+  /*@include accentFontStack;*/
 }
 
 /*================ Nav Links ================*/
@@ -3256,7 +3254,7 @@ that were modified above
 }
 
 .site-nav__link {
-  @include accentFontStack;
+  /*@include accentFontStack;*/
   @include transition(color 0.2s);
   font-size: em(14px);
 }
@@ -4806,11 +4804,21 @@ Hiding the word 'Shopify' but not from screen readers.
 
 .product-page-wrapper{
   display: flex;
+  padding: 0!important;
+
+  .subscription-product:first-child:last-child{
+    margin-right: 0;
+  }
+
+  .subscription-product:first-child{
+    margin-left: 0;
+  }
 
   .subscription-product{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 33.3%;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 25px;
     font-family: helvetica, arial, sans-serif;
     background-color: white;
@@ -4821,8 +4829,8 @@ Hiding the word 'Shopify' but not from screen readers.
     text-align: justify;
   } 
 
-  .savings{
-    height: 30px;
+  .product-info{
+    flex-grow: 1;
     text-align: center;
     margin: 0 0 20px 0;
   }
@@ -4834,11 +4842,16 @@ Hiding the word 'Shopify' but not from screen readers.
   }
 
   h3{
-    font-family: helvetica;
-    font-weight: 800;
+    font-family: Muli;
+    font-weight: 900;
     font-size: 2.4em;
     color: black;
-    margin: 20px 0;
+    margin: 0;
+  }
+
+  h3:last-of-type{
+    margin-bottom: 20px;
+    font-size: 1.6em;
   }
 }
 
@@ -4859,7 +4872,7 @@ Hiding the word 'Shopify' but not from screen readers.
     max-width: 90%;
   }
 
-#AddToCartForm--product-template .btn{
+  #AddToCartForm--product-template .btn{
     width: 100%;
     margin: 5px 0;
   }

@@ -17,7 +17,6 @@
           <span class="fallback-text">RSS</span>
         </a>
       </h1>
-      <hr class="hr--small">
     </header>
 
     {% for article in blog.articles %}
@@ -48,7 +47,7 @@
 
         <div class="grid__item large--two-tenths push--large--one-tenth">
           <time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}" class="date">{{ article.published_at | date: format: 'date' }}</time>
-          <hr class="hr--small hr--left small--hide">
+          <hr class="hr--left small--hide">
         </div>
         <div class="grid__item large--six-tenths push--large--one-tenth">
           <h2 class="h3"><a class="article__heading-link" href="{{ article.url }}">{{ article.title }}</a></h2>

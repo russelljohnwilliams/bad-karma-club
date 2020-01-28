@@ -10,7 +10,6 @@
 
     <header class="section-header text-center">
       <h1>{{ article.title }}</h1>
-      <hr class="hr--small">
       <p>
         <span class="date"><time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}">{{ article.published_at | date: format: 'date' }}</time></span>
       </p>
@@ -35,7 +34,7 @@
 
           {% if number_of_comments > 0 %}
             <h2 class="h3 text-center">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h2>
-            <hr class="hr--small hr--clear">
+            <hr class="hr--clear">
           {% endif %}
 
           {% paginate article.comments by 5 %}
@@ -87,7 +86,7 @@
 
 
               <h2 class="h3 text-center">{{ 'blogs.comments.title' | t }}</h2>
-              <hr class="hr--small hr--clear">
+              <hr class="hr--clear">
 
               <div class="form-vertical">
                 {% form 'new_comment', article %}
