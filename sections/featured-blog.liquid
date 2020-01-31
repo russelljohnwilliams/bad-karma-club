@@ -36,6 +36,7 @@
             <noscript>
               {{ article.image | img_url: '1024x1024' | img_tag: article.title | escape }}
             </noscript>
+            <div class="mini-text mini-text-section-two-rotate">Good Music, Bad Karma.</div>
             <div class="article__featured-image-wrapper" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
               {% assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
               <img class="article__featured-image lazyload"
@@ -55,7 +56,6 @@
           {% include 'featured-blog', article: article %}
           {% endunless %}
         </div>
-        <div class="mini-text mini-text-section-three">Life has surface noise</div>
       </div>
 
       {% if section.settings.post_limit == 1 and section.settings.blog_show_image %}

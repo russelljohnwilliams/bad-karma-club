@@ -2188,7 +2188,7 @@ h2, .h3{
 
 
 .mini-text-section-two-rotate{
-  float: left;
+  /*float: left;
   -webkit-transform: rotate(-90deg);
   -webkit-transform-origin: left;
   -moz-transform: rotate(-90deg);
@@ -2199,7 +2199,8 @@ h2, .h3{
   -o-transform-origin: left;
   transform: rotate(-90deg);
   transform-origin: left;
-  top: 25em;
+  top: 25em;*/
+  text-align: center;
 }
 
 .mini-text-section-three{
@@ -2252,156 +2253,229 @@ h2, .h3{
 
 
 
+/*================ Partials | double image section ================*/
+
+/*================ Variables ================*/
+$dimensions: calc(40vw - 10px);
+
+#shopify-section-1580248156513{
+  width: 50%;
+  display: inline-table;
+
+  .feature-row__text{
+    display: none;
+  }
+
+  .feature-row__image-wrapper{
+    width: $dimensions;
+    height: $dimensions;
+  }
+
+  .feature-row__image{
+    min-height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    mix-blend-mode: overlay;
+  }
+
+  .feature-row__item{
+    flex: none;
+    max-height: $dimensions;
+    overflow: hidden;
+    position: relative;
+    right: -20%;
+
+    box-shadow: inset 0px 0px 70px 10px rgba(46,45,46,1); 
+    z-index: 1; 
+  }
+
+  .wrapper {
+    margin: 0 10px 0 auto;
+    padding: 0;
+  }
+}
+
+#shopify-section-1580248207936{
+  width: 50%;
+  display: inline-table;
+
+  .feature-row__text{
+    display: none;
+  }
+
+  .feature-row__image{
+    min-height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    mix-blend-mode: overlay;
+
+  }
+
+  .feature-row__image-wrapper{
+    width: $dimensions;
+    height: $dimensions;
+  }
+
+  .feature-row__item{
+    flex: none;
+    max-height: $dimensions;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 70px 10px rgba(46,45,46,1); 
+    z-index: 1; 
+  }
+
+  .wrapper {
+    margin: 0 auto 0 10px;
+    padding: 0;
+  }
+}
+
 /*================ Partials | section blog ================*/
 
 
 #shopify-section-1578175434350{
   .grid-uniform{
     display: flex;
-    flex-direction: row-reverse;}
+    /*flex-direction: row-reverse;*/
+  }
 
-    
 
 
-    @media only screen and (max-width: 768px){
-      .grid-uniform{
-        display: inline-block;
-      }
 
-      .medium--one-half{
-        width: 100%;
-      }
+  @media only screen and (max-width: 768px){
+    .grid-uniform{
+      display: inline-block;
     }
 
+    .medium--one-half{
+      width: 100%;
+    }
+  }
 
 
 
+
+} 
+
+
+#shopify-section-1578315780936{
+
+  margin-top: 20px;
+
+  .custom__item:first-child{
+    background-color: red;
+    height: 0;
+  }
+
+  button{
+    position: relative;
+    top: -15em;
+  }
+}
+
+
+
+/*================ Partials | section subscriptions ================*/
+
+#shopify-section-1578185450504{
+
+  h3{
+    margin: 0;
+    color: $colorBody;
+    font-size: 2em;
+  }
+
+  p{ 
+    margin-bottom: 10px;
+  }
+
+  .product-page-wrapper{
+    display: flex;
+  }
+
+  .custom__item-inner, .rte{
+    height: 100%; 
+  }
+
+  .subscription-product{
+    display: flex;
+    flex-direction: column;
+    background-color: $colorTextBody;
+    color: $colorBody;
+    padding: 25px;
+    margin: 0;
+    font-size: 1em;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
   } 
 
-
-  #shopify-section-1578315780936{
-
-    margin-top: 20px;
-
-    .custom__item:first-child{
-      background-color: red;
-      height: 0;
-    }
-
-    button{
-      position: relative;
-      top: -15em;
-    }
+  .subscription-info{
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 0 20px 0;
   }
 
 
 
-  /*================ Partials | section subscriptions ================*/
-
-  #shopify-section-1578185450504{
-
-    h3{
-      margin: 0;
-      color: $colorBody;
-      font-size: 2em;
-    }
-
-    p{ 
-      text-align: justify;
-      margin-bottom: 75px;
-    }
-
-    .subscription-product{
-      background-color: $colorTextBody;
-      color: $colorBody;
-      padding: 25px;
-      margin: 0;
-      font-size: 1em;
-      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-      display: block;
-    }
-
-    /**/
-    .rte, .rte>div, .custom__item{
-      margin-bottom: 0;
-    }
-
-
-
-    .savings{
-      text-align: center;
-      color: black;
-      font-family: arial;
-      height: 30px;
-    }
-
-    .btn{
-      transition: 0.5s;
-      background-color: #f33c3c;
-      width: 80%;
-      height: 60px;
-      align-self: center;
-      margin: 0 auto;
-      display: block;
-      font-family: arial;
-    }
-
-
-
-    @media only screen and (min-width:768px)  {
-      .subscription-product:hover{
-        border-bottom: none;
-        transform: scale(1.05, 1.05);
-        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-        0 2px 2px rgba(0,0,0,0.12), 
-        0 4px 4px rgba(0,0,0,0.12), 
-        0 8px 8px rgba(0,0,0,0.12),
-        0 16px 16px rgba(0,0,0,0.12);
-        -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-        0 2px 2px rgba(0,0,0,0.12), 
-        0 4px 4px rgba(0,0,0,0.12), 
-        0 8px 8px rgba(0,0,0,0.12),
-        0 16px 16px rgba(0,0,0,0.12);
-        box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-        0 2px 2px rgba(0,0,0,0.12), 
-        0 4px 4px rgba(0,0,0,0.12), 
-        0 8px 8px rgba(0,0,0,0.12),
-        0 16px 16px rgba(0,0,0,0.12);
-      }
-
-      .sign-up-button:hover{
-        -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
-        inset 1px 2px 2px rgba(0,0,0,0.12), 
-        inset 2px 4px 4px rgba(0,0,0,0.12), 
-        inset 4px 8px 8px rgba(0,0,0,0.12),
-        inset 8px 16px 16px rgba(0,0,0,0.12);
-        -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
-        inset 1px 2px 2px rgba(0,0,0,0.12), 
-        inset 2px 4px 4px rgba(0,0,0,0.12), 
-        inset 4px 8px 8px rgba(0,0,0,0.12),
-        inset 8px 16px 16px rgba(0,0,0,0.12);
-        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.12), 
-        inset 1px 2px 2px rgba(0,0,0,0.12), 
-        inset 2px 4px 4px rgba(0,0,0,0.12), 
-        inset 4px 8px 8px rgba(0,0,0,0.12),
-        inset 8px 16px 16px rgba(0,0,0,0.12);
-      }
-    }
-
-    @media only screen and (max-width: 768px){
-      .custom-content{
-        display: inline-block;
-      }
-
-      .one-third{
-        width: 100%;
-        margin-bottom: 25px;
-      }
-    }
+  /**/
+  .rte, .rte>div, .custom__item{
+    margin-bottom: 0;
   }
 
-  /*================ Module-specific styles ================*/
+
+
+
+  .btn{
+    transition: 0.5s;
+    background-color: #f33c3c;
+    width: 80%;
+    height: 60px;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    font-family: arial;
+  }
+
+
+
+  @media only screen and (min-width:768px)  {
+    .subscription-product:hover{
+      border-bottom: none;
+      transform: scale(1.05, 1.05);
+      -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+    }
+
+    
+  }
+
+  @media only screen and (max-width: 768px){
+    .custom-content{
+      display: inline-block;
+    }
+
+    .one-third{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+/*================ Module-specific styles ================*/
 /*============================================================================
 To update Slick slider to a new version,
 scroll down to #Slick Slider SCSS and follow the instructions
@@ -4288,6 +4362,8 @@ button.mfp-arrow {
   }
 }
 
+
+
 .article__featured-image {
   display: block;
   margin: 0 auto;
@@ -4301,6 +4377,17 @@ button.mfp-arrow {
 .article__featured-image-link {
   display: block;
   margin-bottom: $gutter;
+}
+
+#shopify-section-1578175434350{
+  .article__featured-image {
+
+    transform: rotate(90deg);  
+  }
+
+  .article__featured-image-link {
+    transform: rotate(-90deg);
+  }
 }
 
 /*================ RSS ================*/
@@ -4856,6 +4943,112 @@ Hiding the word 'Shopify' but not from screen readers.
 }
 
 
+/*================ blog page ================*/
+
+
+#news{
+  .article{
+    display: flex;
+  }
+
+  .blog__img{
+    width: 35%;
+  }
+
+}
+
+
+/*================ article page ================*/
+
+
+.template-article{
+
+  .wrapper{
+    /*max-width: 100vw;*/
+    /*width: 100vw;*/
+/*    margin: 0;
+    padding: 0;*/
+  }
+
+  .header__image-title-wrapper{
+    height: 300px;
+    overflow: hidden;
+    margin: 50px 0;
+
+  }
+
+  .header-wrapper{
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .article__featured-image {
+    filter: brightness(75%);
+  }
+
+  .large--five-sixths{
+    width: 100%;
+  }
+
+  .push--large--one-twelfth{
+    left: 0;
+  }
+
+  .article-text-content{
+    text-align: justify;
+  }
+
+  .article__featured-image {
+    filter: grayscale(30%) contrast(0.9) blur(0px);
+  }
+
+  /*css duotone*/
+
+
+/*  .article__featured-image-wrapper {
+    background-color:    $colorTextBody;
+    display:             flex;
+    flex:                1 1 100%;
+    height:              100%;
+    overflow:            hidden;
+    padding:             1%;
+  }
+
+  .article__featured-image {
+    filter: grayscale(100%) contrast(1.5) blur(0px);
+    flex: 1 0 100%;
+    height: 100%;
+    max-width: 100%;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .article__featured-image-wrapper::before {
+    background-color:    $colorBody;
+    bottom:              0;
+    content:             '';
+    height:              100%;
+    left:                0;
+    mix-blend-mode:      exclusion;
+    position:            absolute;
+    right:               0;
+    top:                 0;
+    width:               100%;
+    z-index:             1;
+  }*/
+
+
+
+}
+
+
+
+
+
 /*media queries*/
 
 
@@ -4887,6 +5080,35 @@ Hiding the word 'Shopify' but not from screen readers.
 
   .main-content{
     min-height: 75vh;
+  }
+
+  #shopify-section-1578175434350{
+    .grid__item{
+      padding: 0;
+    }
+
+    .featured-blog__post{
+      text-align: center;
+    }
+  }
+
+  #shopify-section-1580248207936,
+  #shopify-section-1580248156513{
+    display: none;  
+  }
+
+  #shopify-section-1578185450504{
+    .custom-content{
+      display: flex;
+    }
+  }
+
+  .btn, .btn--secondary{
+    width: 100%;
+  }
+
+  #shopify-section-1578088711716{
+    margin-top: 75px;
   }
 }
 
