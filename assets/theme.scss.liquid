@@ -4914,7 +4914,33 @@ Hiding the word 'Shopify' but not from screen readers.
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: justify;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   } 
+
+  @media only screen and (min-width:768px)  {
+    .subscription-product:hover{
+      border-bottom: none;
+      transform: scale(1.05, 1.05);
+      -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+      0 2px 2px rgba(0,0,0,0.12), 
+      0 4px 4px rgba(0,0,0,0.12), 
+      0 8px 8px rgba(0,0,0,0.12),
+      0 16px 16px rgba(0,0,0,0.12);
+    }
+
+    
+  }
 
   .product-info{
     flex-grow: 1;
@@ -5109,6 +5135,15 @@ Hiding the word 'Shopify' but not from screen readers.
 
   #shopify-section-1578088711716{
     margin-top: 75px;
+  }
+
+  .product-page-wrapper{
+    display: inherit;
+
+    .subscription-product{
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
   }
 }
 
