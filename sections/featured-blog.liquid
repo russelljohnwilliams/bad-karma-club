@@ -63,13 +63,17 @@
         <div class="featured-blog__post">
          {% include 'featured-blog', article: article %}
        </div>
-       <button class="btn ctr-button sign-up-button">Get Started</button>
+       <div class="btn ctr-button sign-up-button"><a href="pages/product-page" class="subscription-product monthly-subscription">Get Started</a></div>
      </div>
+
      {% endif %}
 
      {% endfor %}
    </div>
-
+   <div class="double-crosses">
+   <div class="cross">+</div>
+   <div class="cross">+</div>
+   </div>
    {% else %}
    {% include 'onboarding-featured-blog' %}
    {% endunless %}

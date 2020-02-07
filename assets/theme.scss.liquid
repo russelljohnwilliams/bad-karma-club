@@ -4349,6 +4349,7 @@ button.mfp-arrow {
 
 
 /*================ View-specific styles ================*/
+
 /*================ Templates | Theme Blog ================*/
 .article {
   margin-bottom: -($gutter / 2);
@@ -4375,8 +4376,9 @@ button.mfp-arrow {
 }
 
 .article__featured-image-link {
-  display: block;
-  margin-bottom: $gutter;
+  /*display: block;*/
+  /*margin-bottom: $gutter;*/
+  /*filter: brightness(60%);*/
 }
 
 #shopify-section-1578175434350{
@@ -4974,11 +4976,57 @@ Hiding the word 'Shopify' but not from screen readers.
 
 #news{
   .article{
-    display: flex;
+    width: calc(50% - 14px);
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .blog__img{
-    width: 35%;
+    /*width: 35%;*/
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .blog__{
+    height: 100%;
+    width: 100%;
+    bottom: -40%;
+    margin: 0;
+    padding: 0 15px;
+    position: absolute;
+  }
+
+  .h3{
+    margin: 0 0 10px 0!important;
+  }
+
+  h2 a, .h3 a{
+    font-size: 0.8em;
+  }
+
+  .rte, .text-link{
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    background-color: black;
+    padding: 10px;
+  }
+
+  .article__featured-image {
+    filter: brightness(70%);
+  }
+
+
+  .article:hover .rte, .article:hover .text-link{
+    opacity: 1;
+
+    /*transition: 1s ease-in-out;*/
   }
 
 }
@@ -4993,44 +5041,58 @@ Hiding the word 'Shopify' but not from screen readers.
     /*max-width: 100vw;*/
     /*width: 100vw;*/
 /*    margin: 0;
-    padding: 0;*/
-  }
+padding: 0;*/
+}
 
-  .header__image-title-wrapper{
-    height: 300px;
-    overflow: hidden;
-    margin: 50px 0;
+.header__image-title-wrapper{
+  overflow: hidden;
+  margin: 0;
+  width: 44%;
+  display: inline-block;
+  height: 80vh;
+  position: sticky;
+}
 
-  }
+.header-wrapper{
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  width: 100%;
+}
 
-  .header-wrapper{
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    width: 100%;
-  }
+.article__featured-image {
+  filter: brightness(75%);
+}
 
-  .article__featured-image {
-    filter: brightness(75%);
-  }
+.article__featured-image-wrapper{
+  width: 80vw;
+}
 
-  .large--five-sixths{
-    width: 100%;
-  }
+.large--five-sixths{
+  width: 100%;
+}
 
-  .push--large--one-twelfth{
-    left: 0;
-  }
+.push--large--one-twelfth{
+  left: 0;
+  display: flex;
+  margin: 50px 0;
+}
 
-  .article-text-content{
-    text-align: justify;
-  }
+.article-text-content{
+  text-align: justify;
+  display: inline-block;
+}
 
-  .article__featured-image {
-    filter: grayscale(30%) contrast(0.9) blur(0px);
-  }
+.article__featured-image {
+  filter: grayscale(30%) contrast(0.9) blur(0px);
+}
 
-  /*css duotone*/
+.rte--indented-images{
+  width: 70%;
+  margin-top: 50px;
+}
+
+/*css duotone*/
 
 
 /*  .article__featured-image-wrapper {
@@ -5065,85 +5127,149 @@ Hiding the word 'Shopify' but not from screen readers.
     top:                 0;
     width:               100%;
     z-index:             1;
-  }*/
+    }*/
 
 
 
-}
-
-
-
-
-
-/*media queries*/
-
-
-@media only screen and (max-width: 768px){
-  .mini-text{
-    display: none;
   }
 
-  .feature-row__text{
-    max-width: 100%;
-  }
 
-  #shopify-section-1578088711716 .feature-row__text{
-    max-width: 90%;
-  }
 
-  #AddToCartForm--product-template .btn{
-    width: 100%;
-    margin: 5px 0;
-  }
 
-  .medium--six-twelfths{
-    width: 100%;
-  }
 
-  .medium--five-twelfths{
-    width: 100%;
-  }
+  /*media queries*/
 
-  .main-content{
-    min-height: 75vh;
-  }
 
-  #shopify-section-1578175434350{
-    .grid__item{
-      padding: 0;
+  @media only screen and (max-width: 768px){
+    .mini-text{
+      display: none;
     }
 
-    .featured-blog__post{
-      text-align: center;
+    .feature-row__text{
+      max-width: 100%;
     }
-  }
 
-  #shopify-section-1580248207936,
-  #shopify-section-1580248156513{
-    display: none;  
-  }
-
-  #shopify-section-1578185450504{
-    .custom-content{
-      display: flex;
+    #shopify-section-1578088711716 .feature-row__text{
+      max-width: 90%;
     }
-  }
 
-  .btn, .btn--secondary{
-    width: 100%;
-  }
-
-  #shopify-section-1578088711716{
-    margin-top: 75px;
-  }
-
-  .product-page-wrapper{
-    display: inherit;
-
-    .subscription-product{
+    #AddToCartForm--product-template .btn{
       width: 100%;
-      margin: 0 0 20px 0;
+      margin: 5px 0;
+    }
+
+    .medium--six-twelfths{
+      width: 100%;
+    }
+
+    .medium--five-twelfths{
+      width: 100%;
+    }
+
+    .main-content{
+      min-height: 75vh;
+    }
+
+    #shopify-section-1578175434350{
+      .grid__item{
+        padding: 0;
+      }
+
+      .featured-blog__post{
+        text-align: center;
+      }
+    }
+
+    #shopify-section-1580248207936,
+    #shopify-section-1580248156513{
+      display: none;  
+    }
+
+    #shopify-section-1578185450504{
+      .custom-content{
+        display: flex;
+      }
+    }
+
+    .btn, .btn--secondary{
+      width: 100%;
+    }
+
+    #shopify-section-1578088711716{
+      margin-top: 75px;
+    }
+
+    .product-page-wrapper{
+      display: inherit;
+
+      .subscription-product{
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    #news {
+
+      .push--large--one-twelfth{
+        padding: 0;
+      }
+
+      .article{
+        width: 100%;
+        margin: 0 0 10px 0;
+        height: 250px;
+      }
+
+
+      h2 a, .h3 a{
+        font-size: 0.5em;
+      }
+
+      .article:hover .rte, .article:hover .text-link{
+        opacity: 0;
+      }
+
+      .rte, .text-link{
+        opacity: 1;
+        background-color: initial;
+        padding: 10px;
+        text-align: justify;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .blog__{
+        padding: 0;
+        bottom: -10%;
+      }
+
+
+    }
+
+    .template-article{
+
+      .push--large--one-twelfth{
+        display: initial;
+        padding: 0;
+      }
+
+      .header__image-title-wrapper{
+        height: 30vh;
+        width: 100%;
+      }
+
+      .article__featured-image-wrapper{
+        width: 100%;
+      }
+
+      .rte--indented-images {
+          width: 100%;
+          margin-top: 10px;
+
+          h3{
+            margin-bottom: 1em;
+          }
+      }
     }
   }
-}
 
