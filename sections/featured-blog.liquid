@@ -28,7 +28,7 @@
     <div class="grid-uniform">
       {% for article in blog.articles limit: section.settings.post_limit %}
       <div class="grid__item {{ width }}">
-        <div class="featured-blog__post">
+        <div class="featured-blog__post featured-blog__image">
 
           {% if section.settings.blog_show_image %}
           {% unless article.image == blank %}
@@ -60,7 +60,7 @@
 
       {% if section.settings.post_limit == 1 and section.settings.blog_show_image %}
       <div class="grid__item {{ width }}">
-        <div class="featured-blog__post">
+        <div class="featured-blog__post featured-blog__text">
          {% include 'featured-blog', article: article %}
        </div>
        <div class="btn ctr-button sign-up-button"><a href="pages/product-page" class="subscription-product monthly-subscription">Get Started</a></div>
